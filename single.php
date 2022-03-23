@@ -4,10 +4,12 @@
     <main>
       <section class="works content_width">
         <div class="heading fadeInTrigger">
-          <h2 class="en">Works</h2>
+          <h1 class="en">Works</h1>
           <p class="jp_heading">制作実績</p>
         </div>
-        <?php the_post_thumbnail('large'); ?>
+        <div class="thumbnail">
+          <?php the_post_thumbnail('large'); ?>
+        </div>
         <p class="company fadeInTrigger"><?php echo get_post_meta($post->ID, '企業名', true); ?></p>
         <p class="url fadeInTrigger"><?php echo get_post_meta($post->ID, 'URL', true); ?></p>
         <div class="text">
@@ -18,7 +20,6 @@
           <div class="outline fadeUpTrigger">
             <h3>概要</h3>
             <dl>
-              <!-- 項目名： 内容をループ表示 -->
               <dt>カテゴリ</dt>
               <dd><?php $cats = get_the_category();
                 foreach($cats as $cat){
@@ -38,13 +39,10 @@
             </dl>
           </div>
         </div>
-        <h3 class="fadeUpTrigger">キャプチャー</h3>
-        <img
-          class="capture fadeUpTrigger"
-          src="【キャプチャー画像リンク】"
-          alt="キャプチャー画像"
-        />
-        <a href="works_list.html" class="btn btn_center btn_mocha"
+        <div class="capture">
+            <?php the_content(); ?>
+        </div>
+        <a class="btn btn_center btn_orange" href="<?php echo esc_url(home_url('/category/works/')); ?>"
           >一覧に戻る</a
         >
       </section>

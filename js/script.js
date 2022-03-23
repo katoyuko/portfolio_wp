@@ -12,45 +12,39 @@ $(function () {
   });
 });
 
-// 動きのきっかけとなるアニメーションの名前を定義
+// 表示
 function fadeAnime() {
-  // ふわっ
+  // その場でふわっと表示
   $(".fadeInTrigger").each(function () {
-    //fadeInTriggerというクラス名が
-    var elemPos = $(this).offset().top - 50; //要素より、50px上の
+    var elemPos = $(this).offset().top - 50; //要素より、50px上
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
     if (scroll >= elemPos - windowHeight) {
       $(this).addClass("fadeIn"); // 画面内に入ったらfadeInというクラス名を追記
-    } else {
-      $(this).removeClass("fadeIn"); // 画面外に出たらfadeInというクラス名を外す
     }
   });
-  // 下からふわっ
+  // 下からふわっと表示
   $(".fadeUpTrigger").each(function () {
-    //fadeUpTriggerというクラス名が
-    var elemPos = $(this).offset().top - 50; //要素より、50px上の
+    var elemPos = $(this).offset().top - 50; //要素より、50px上
     var scroll = $(window).scrollTop();
     var windowHeight = $(window).height();
     if (scroll >= elemPos - windowHeight) {
       $(this).addClass("fadeUp"); // 画面内に入ったらfadeUpというクラス名を追記
-    } else {
-      $(this).removeClass("fadeUp"); // 画面外に出たらfadeUpというクラス名を外す
     }
   });
 }
 
-// 画面をスクロールをしたら動かしたい場合の記述
+// スクロールしたら
 $(window).scroll(function () {
-  fadeAnime(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面をスクロールをしたら動かしたい場合の記述
+  fadeAnime();
+});
 
-// 画面が読み込まれたらすぐに動かしたい場合の記述
+// 画面が読み込まれたら（子ページ）
 $(window).on("load", function () {
-  fadeAnime(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+  fadeAnime();
+});
 
-// eachTextAnimeにappeartextというクラス名を付ける定義
+// 一文字ずつ表示
 function EachTextAnimeControl() {
   $(".eachTextAnime").each(function () {
     var elemPos = $(this).offset().top - 50;
@@ -58,18 +52,16 @@ function EachTextAnimeControl() {
     var windowHeight = $(window).height();
     if (scroll >= elemPos - windowHeight) {
       $(this).addClass("appeartext");
-    } else {
-      $(this).removeClass("appeartext");
     }
   });
 }
 
-// 画面をスクロールをしたら動かしたい場合の記述
+// スクロールしたら
 $(window).scroll(function () {
-  EachTextAnimeControl(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面をスクロールをしたら動かしたい場合の記述
+  EachTextAnimeControl();
+});
 
-// 画面が読み込まれたらすぐに動かしたい場合の記述
+// 画面が読み込まれたら
 $(window).on("load", function () {
   //spanタグを追加する
   var element = $(".eachTextAnime");
@@ -93,5 +85,5 @@ $(window).on("load", function () {
     $(this).html(textbox);
   });
 
-  EachTextAnimeControl(); /* アニメーション用の関数を呼ぶ*/
-}); // ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+  EachTextAnimeControl();
+});

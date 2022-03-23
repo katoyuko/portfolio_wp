@@ -4,7 +4,7 @@
     <main>
       <section class="about_detail">
         <div class="heading fadeInTrigger">
-          <h2 class="en">About</h2>
+          <h1 class="en">About</h1>
           <p class="jp_heading">Omokaについて</p>
         </div>
         <div class="about_message">
@@ -31,7 +31,7 @@
         </div>
         <div class="info">
         <img src="<?php echo esc_url(get_theme_file_uri('img/profile.jpg')); ?>" alt="Omokaについて" />
-          <dl class="fadeUpTrigger delay-time02">
+          <dl class="fadeUpTrigger delay-time01">
             <dt>名称</dt>
             <dd>Omoka（オモカ）</dd>
             <dt>事業内容</dt>
@@ -68,7 +68,7 @@
             </dd>
           </dl>
         </div>
-        <a href="index.html#contact" class="btn btn_center btn_orange"
+        <a class="btn btn_center btn_orange" href="<?php echo esc_url(home_url('#contact')); ?>"
           >話を聞いてみる</a
         >
       </section>

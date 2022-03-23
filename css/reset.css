@@ -18,10 +18,10 @@ dl {
   padding: 0;
   line-height: 1;
   color: #3a3937;
-  font-feature-settings: "palt"; /* 文字詰：メトリクス */
-  font-family: "FOT-TsukuARdGothic Std", sans-serif;
+  font-family: "FOT-TsukuARdGothic Std", "A1ゴシック L JIS2004", sans-serif;
   font-weight: 400;
-  line-height: 1.75; /* 行高28px/フォントサイズ 16px */
+  line-height: 1.75;
+  font-size: 15px;
   letter-spacing: 0.12em;
 }
 

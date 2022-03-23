@@ -4,7 +4,7 @@
     <main>
       <section class="content_width">
         <div class="heading fadeInTrigger">
-          <h2 class="en">Works</h2>
+          <h1 class="en">Works</h1>
           <p class="jp_heading">制作実績一覧</p>
         </div>
         <div class="works_grid">
@@ -27,9 +27,9 @@
               </div>
             <?php endwhile; ?>
           <?php endif; ?>
-          <!-- END -->
+          <!-- end -->
         </div>
-        <a href="index.html#contact" class="btn btn_center btn_orange"
+        <a class="btn btn_center btn_orange" href="<?php echo esc_url(home_url('#contact')); ?>"
           >話を聞いてみる</a
         >
       </section>
