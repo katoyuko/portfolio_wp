@@ -3,20 +3,19 @@
 
     <!-- main visual -->
     <div class="main_visual">
-      <div class="main_image">
-        <img src="<?php echo esc_url(get_theme_file_uri('img/fv.png')); ?>" alt="main visual 画像" />
+      <div class="fv_circle">
+        <p class="main_message">
+          大切な<span class="font_large">想い</span>を<span
+            class="font_large font_emphasis circle"
+            >カ</span
+          ><span class="font_large font_emphasis triangle">タ</span
+          ><span class="font_large font_emphasis square">チ</span
+          ><span class="font_emphasis semicircle">に</span><br />相手に<span
+            class="font_large"
+            >響く</span
+          >デザインを
+        </p>
       </div>
-      <p class="main_message">
-        大切な<span class="font_large">想い</span>を<span
-          class="font_large font_emphasis circle"
-          >カ</span
-        ><span class="font_large font_emphasis triangle">タ</span
-        ><span class="font_large font_emphasis square">チ</span
-        ><span class="font_emphasis semicircle">に</span><br />相手に<span
-          class="font_large"
-          >響く</span
-        >デザインを
-      </p>
       <div class="scroll_down"><span>Scroll</span></div>
     </div>
 
@@ -25,7 +24,7 @@
       <section id="service" class="content_width">
         <div class="heading fadeInTrigger">
           <h2 class="en service_heading"><span>Service</span></h2>
-          <p class="jp_heading">できること</p>
+          <!-- <p class="jp_heading">できること</p> -->
         </div>
         <div class="service_list">
           <div class="service_item fadeUpTrigger">
@@ -42,7 +41,7 @@
             <h3 class="service_title">コーディング</h3>
             <p class="service_desc">
               HTML &
-              CSSを用いてデザインカンプから再現性の高いコーディングができます。また、デザインの意図を理解し、スマートフォンに対応したサイトやJavascriptを使用した動きのあるサイトのコーディングを行います。
+              CSSを用いてデザインカンプから再現性の高いコーディングができます。また、スマートフォンに対応したサイトやJavascriptを使用した動きのあるサイト、ワードプレスを使用した更新が可能なサイトのコーディングを行います。
             </p>
           </div>
           <div class="service_item fadeUpTrigger delay-time02">
@@ -60,7 +59,7 @@
       <section id="works" class="content_width">
         <div class="heading fadeInTrigger">
           <h2 class="en works_heading"><span>Works</span></h2>
-          <p class="jp_heading">制作実績</p>
+          <!-- <p class="jp_heading">制作実績</p> -->
         </div>
         <div class="works_grid">
           <!-- 最新の実績4件ループ表示 -->
@@ -101,7 +100,7 @@
       <section id="about" class="content_width">
         <div class="heading fadeInTrigger">
           <h2 class="en about_heading"><span>About</span></h2>
-          <p class="jp_heading">Omokaについて</p>
+          <!-- <p class="jp_heading">Omokaについて</p> -->
         </div>
         <div class="top_about_background">
           <div class="top_about_circle about_circle"></div>
@@ -128,14 +127,19 @@
       <section id="contact">
         <div class="heading fadeInTrigger">
           <h2 class="en contact_heading"><span>Contact</span></h2>
-          <p class="jp_heading">ご依頼・お問い合わせ</p>
+          <!-- <p class="jp_heading">ご依頼・お問い合わせ</p> -->
         </div>
         <div class="contact_content">
-          <p class="contact_text">
+          <p class="contact_text instagram">
             当ポートフォリオサイトにご訪問いただき、誠にありがとうございます。<br />
-            制作のご依頼やご相談、ご不明な点等ございましたらお気軽にお問い合わせください。
+            制作のご依頼やご相談、ご不明な点等ございましたらお気軽にお問い合わせください。<br />
+            3営業日以内にご連絡をさせていただきます。<br />
+            お急ぎの場合は 
+            <a href="https://www.instagram.com/omoka_web_design/?ref=badge"
+              >Instagram</a> のDMにてご連絡くださいませ。
           </p>
-          <?php echo do_shortcode('[contact-form-7 id="24"]'); ?>
+          <?php $get_form = get_posts(array('post_type' => 'wpcf7_contact_form', 'posts_per_page' => -1))[0]; ?>
+          <?php echo do_shortcode( '[contact-form-7 id="'.$get_form->ID.'" title="'.$get_form->post_title.'"]' ); ?>
         </div>
       </section>
     </main>

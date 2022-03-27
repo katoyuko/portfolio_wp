@@ -4,8 +4,7 @@
     <main>
       <section class="works content_width">
         <div class="heading fadeInTrigger">
-          <h1 class="en">Works</h1>
-          <p class="jp_heading">制作実績</p>
+        <h1 class="en works_heading"><span>Works</span></h1>
         </div>
         <div class="thumbnail">
           <?php the_post_thumbnail('large'); ?>

@@ -4,17 +4,14 @@
     <main>
       <section class="about_detail">
         <div class="heading fadeInTrigger">
-          <h1 class="en">About</h1>
-          <p class="jp_heading">Omokaについて</p>
+          <h1 class="en about_heading"><span>About</span></h1>
         </div>
         <div class="about_message">
           <div class="about_circle">
             <div class="introduction fadeInTrigger delay-time">
               <p>
                 当ポートフォリオサイトにご訪問いただきありがとうございます。
-              </p>
-              <p>
-                IT企業にてフロントエンドエンジニアとして働く傍ら
+                IT企業にてフロントエンドエンジニアとして働く傍ら、
                 Webサイト制作のお仕事をしております。
               </p>
               <p>
@@ -24,8 +21,8 @@
               </p>
               <p>
                 学生時代の接客業や海外ボランティア活動で培った「コミュニケーション力」と経理職、エンジニア職で培った「緻密な作業を遂行する力」が強みです。
-                ご依頼やご相談などお気軽にお問い合わせくださいませ。
               </p>
+              <p>ご依頼やご相談などお気軽にお問い合わせくださいませ。</p>
             </div>
           </div>
         </div>

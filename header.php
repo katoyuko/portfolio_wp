@@ -22,43 +22,27 @@
     <!-- フォント読み込み -->
     <link rel="stylesheet" href="https://use.typekit.net/rxb6fxm.css">
     <script>
-      (function (d) {
+      (function(d) {
         var config = {
-            kitId: "hey7hsp",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className =
-              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
+          kitId: 'zht8kct',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
       })(document);
+    </script>
+    <script>
+      $(function(){
+	      document.addEventListener('wpcf7mailsent', function( event ) {
+	      	location = 'https://omoka.site/thanks/';
+	      }, false );
+      });
     </script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
-    <!-- ローディング -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <!-- functions.phpに記載したCSSとJavaScriptを読み込む -->
     <?php wp_head(); ?>
 </head>
@@ -66,8 +50,8 @@
 <body>
     <!-- ローディング -->
     <?php if ( is_home() || is_front_page() ) : ?>
-      <div id="splash">
-        <div id="splash_logo">
+      <div class="loading">
+        <div class="loading-animation">
           <img class="fadeUp" src="<?php echo get_template_directory_uri(); ?>/img/common/logo.png" alt="Omoka -Web Design- のロゴ">
         </div>
       </div>

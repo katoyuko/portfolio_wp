@@ -1,9 +1,8 @@
-  <?php if ( is_home() || is_front_page() ) : ?>
-    <footer>
-  <?php else : ?>
-    <footer class="footer">
-  <?php endif; ?>
-  <!-- <footer class="footer"> -->
+  <footer
+    <?php if ( !is_home() && !is_front_page() ) : ?>
+      class="footer"
+    <?php endif; ?>
+  >
     <div class="footer_content">
       <nav class="footer_nav">
         <ul>

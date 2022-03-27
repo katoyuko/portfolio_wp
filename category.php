@@ -2,10 +2,9 @@
     <?php get_header(); ?>
 
     <main>
-      <section class="content_width">
+      <section class="works content_width">
         <div class="heading fadeInTrigger">
-          <h1 class="en">Works</h1>
-          <p class="jp_heading">制作実績一覧</p>
+          <h1 class="en works_heading"><span>Works</span></h1>
         </div>
         <div class="works_grid">
           <!-- 実績ループ表示 -->
