@@ -82,7 +82,7 @@ section,
 .loading {
   width: 100vw;
   height: 100vh;
-  transition: all 3s;
+  transition: all 1.5s;
   background-color: #fff;
   position: fixed;
   top: 0;
@@ -100,7 +100,7 @@ section,
 .loading-animation {
   width: 100vw;
   height: 100vh;
-  transition: all 3s;
+  transition: all 1.5s;
   background-color: #fff;
   z-index: 9999;
   display: flex;
@@ -115,8 +115,21 @@ section,
   visibility: visible;
 }
 
-@media (max-width: 1200px) {
-  #splash_logo img {
+.loading img,
+.loading-animation img {
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .loading img,
+  .loading-animation img {
+    width: 35%;
+  }
+}
+
+@media (max-width: 576px) {
+  .loading img,
+  .loading-animation img {
     width: 60%;
   }
 }
@@ -222,7 +235,7 @@ section,
   position: fixed;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .pc_nav {
     display: none;
   }
@@ -253,12 +266,6 @@ section,
   transition: all 0.4s ease-out;
 }
 
-@media (max-width: 1200px) {
-  .btn_contact {
-    margin: 0 25%;
-  }
-}
-
 @media (max-width: 768px) {
   .btn_contact {
     width: 60%;
@@ -271,7 +278,7 @@ section,
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .btn_menu {
     display: block;
     position: absolute;
@@ -283,7 +290,7 @@ section,
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .btn_menu span {
     display: block;
     background: #3a3937;
@@ -317,13 +324,13 @@ section,
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .open {
     z-index: 100;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .open span {
     background: transparent;
     /* 親に準ずる 透明 */
@@ -345,7 +352,7 @@ section,
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .sp_nav {
     position: absolute;
     top: 0;
@@ -539,30 +546,6 @@ section,
   }
 }
 
-.semicircle {
-  background-image: url("img/ni.png");
-  background-position: 50% 1%;
-  padding-top: 10px;
-}
-
-@media (max-width: 992px) {
-  .semicircle {
-    padding-top: 10px;
-  }
-}
-
-@media (max-width: 768px) {
-  .semicircle {
-    padding-top: 17px;
-  }
-}
-
-@media (max-width: 576px) {
-  .semicircle {
-    padding-top: 10px;
-  }
-}
-
 /*スクロールダウン*/
 .scroll_down {
   position: absolute;
@@ -706,6 +689,7 @@ section,
 
 .works_item span.mask img {
   width: 100%;
+  height: auto;
   box-sizing: border-box;
 }
 
@@ -736,11 +720,6 @@ section,
   line-height: 1.5;
 }
 
-.works_item span.cap span {
-  font-weight: bold;
-  line-height: 2;
-}
-
 .category {
   font-size: 14px;
   display: flex;
@@ -758,17 +737,18 @@ section,
 
 /* Works */
 .company {
-  font-size: 28px;
-}
-
-@media (max-width: 768px) {
-  .company {
-    font-size: 20px;
-  }
+  padding-left: 8px;
+  font-size: 18px;
 }
 
 .url {
+  padding-left: 8px;
+  text-decoration: underline;
   margin-bottom: 56px;
+}
+
+.url:hover {
+  color: #d8a380;
 }
 
 .works {
@@ -795,15 +775,14 @@ section,
   }
 }
 
-.point p,
-.capture {
-  padding: 8px;
+.works h4 {
+  font-size: 20px;
+  padding: 0 8px;
+  border-bottom: 1px solid #3a3937;
 }
 
-@media (max-width: 768px) {
-  .point p {
-    font-size: 15px;
-  }
+.capture p {
+  padding: 8px;
 }
 
 .outline dl {
@@ -827,7 +806,7 @@ section,
 
 @media (max-width: 768px) {
   .outline dt {
-    width: 23%;
+    width: 30%;
   }
 }
 
@@ -841,7 +820,7 @@ section,
 
 @media (max-width: 768px) {
   .outline dd {
-    width: 77%;
+    width: 70%;
   }
 }
 
@@ -908,19 +887,19 @@ section,
 
 @keyframes warp {
   0% {
-    border-radius: 50% 60% 70% 80% / 50% 40% 50% 70%;
+    border-radius: 50% 60% 50% 70% / 50% 70% 60% 70%;
   }
   25% {
-    border-radius: 70% 50% 50% 70% / 70% 80% 40% 60%;
+    border-radius: 70% 50% 50% 70% / 70% 60% 50% 60%;
   }
   50% {
-    border-radius: 60% 70% 40% 60% / 40% 50% 60% 60%;
+    border-radius: 60% 70% 50% 60% / 40% 50% 70% 60%;
   }
   75% {
-    border-radius: 80% 60% 40% 70% / 70% 50% 70% 40%;
+    border-radius: 70% 60% 50% 70% / 70% 60% 60% 40%;
   }
   100% {
-    border-radius: 60% 50% 70% 80% / 50% 60% 50% 70%;
+    border-radius: 60% 60% 70% 70% / 50% 70% 60% 70%;
   }
 }
 
@@ -1043,6 +1022,7 @@ section,
 
 .thumbnail img {
   width: 100%;
+  height: auto;
 }
 
 .introduction {
@@ -1181,7 +1161,8 @@ section,
   margin-bottom: 48px;
 }
 
-.instagram a {
+.instagram a,
+.twitter a {
   text-decoration: underline;
 }
 
@@ -1191,9 +1172,15 @@ section,
   -webkit-text-fill-color: transparent;
 }
 
+.twitter a:hover {
+  background: #1d9bef;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Contact */
 #contact {
-  background: linear-gradient(to top, #fff -15%, #e3dec2 100%);
+  background: linear-gradient(to top, #fff -2%, #e3dec2 100%);
   padding: 80px 24px;
 }
 
@@ -1229,6 +1216,10 @@ section,
 .contact_text {
   padding: 0 30px;
   margin-bottom: 56px;
+}
+
+.contact_text a {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -1289,6 +1280,10 @@ input[type="submit"] {
   font-family: fot-tsukuardgothic-std, sans-serif;
   font-size: 16px;
   width: 184px;
+  cursor: pointer;
+  /* iOSのデフォルトのスタイルをリセット */
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 /* バリデーション */
@@ -1305,12 +1300,18 @@ input[type="submit"] {
   border: none;
 }
 
+/* スピナー */
+.wpcf7-spinner {
+  background-color: #d7a28e;
+}
+
 /* サンクスページ */
 .thanks {
   text-align: center;
   box-sizing: border-box;
   padding: 80px;
   margin-top: 56px;
+  height: 100vh;
 }
 
 @media (max-width: 576px) {
@@ -1324,6 +1325,10 @@ input[type="submit"] {
   font-size: 14px;
 }
 
+.thanks .btn {
+  margin: 0 auto;
+}
+
 /* フッター */
 .footer {
   width: 100%;
@@ -1335,7 +1340,7 @@ input[type="submit"] {
   padding: 80px 24px;
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  align-items: center;
 }
 
 @media (max-width: 1200px) {
@@ -1361,12 +1366,12 @@ input[type="submit"] {
 .footer_nav ul li a {
   display: block;
   font-family: agenda, sans-serif;
-  width: 80px;
-  margin-right: 40px;
+  /* width: 80px; */
+  margin: 0 20px;
 }
 
-.footer_nav ul li:last-child a {
-  margin-right: 0;
+.pc_sns a {
+  margin: 0;
 }
 
 @media (max-width: 1200px) {
@@ -1377,13 +1382,24 @@ input[type="submit"] {
 }
 
 @media (max-width: 576px) {
-  .footer_nav ul {
+  .footer_nav .footer_list {
     display: none;
   }
 }
 
 .copy_right {
   font-size: 10px;
+}
+
+@media (min-width: 1201px) {
+  .sp_sns {
+    display: none !important;
+  }
+}
+@media (max-width: 1200px) {
+  .pc_sns {
+    display: none !important;
+  }
 }
 
 /* アニメーション */

@@ -4,19 +4,17 @@
     <main>
       <section class="works content_width">
         <div class="heading fadeInTrigger">
-        <h1 class="en works_heading"><span>Works</span></h1>
+          <h1 class="en works_heading"><span>Works</span></h1>
         </div>
-        <div class="thumbnail">
+        <div class="thumbnail fadeUpTrigger">
           <?php the_post_thumbnail('large'); ?>
         </div>
         <p class="company fadeInTrigger"><?php echo get_post_meta($post->ID, '企業名', true); ?></p>
-        <p class="url fadeInTrigger"><?php echo get_post_meta($post->ID, 'URL', true); ?></p>
+        <p class="url fadeInTrigger">
+          <a href="<?php echo get_post_meta($post->ID, 'URL', true); ?>"><?php echo get_post_meta($post->ID, 'URL', true); ?></a>
+        </p>
         <div class="text">
-          <div class="point fadeUpTrigger">
-            <h3>制作のPOINT</h3>
-            <p><?php echo get_post_meta($post->ID, '制作のPOINT', true); ?></p>
-          </div>
-          <div class="outline fadeUpTrigger">
+          <div class="outline">
             <h3>概要</h3>
             <dl>
               <dt>カテゴリ</dt>
@@ -41,9 +39,9 @@
         <div class="capture">
             <?php the_content(); ?>
         </div>
-        <a class="btn btn_center btn_orange" href="<?php echo esc_url(home_url('/category/works/')); ?>"
+        <p><a class="btn btn_center btn_orange" href="<?php echo esc_url(home_url('/category/works/')); ?>"
           >一覧に戻る</a
-        >
+        ></p>
       </section>
     </main>
 

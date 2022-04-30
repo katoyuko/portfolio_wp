@@ -50,8 +50,14 @@
               </p>
               <p class="instagram">
                 Instagram：<br />
-                <a href="https://www.instagram.com/omoka_web_design/?ref=badge"
-                  >omoka_web_design</a
+                <a href="https://www.instagram.com/omoka_design/"
+                  >omoka_design</a
+                >
+              </p>
+              <p class="twitter">
+                Twitter<br />
+                <a href="https://twitter.com/omoka_design"
+                  >omoka_design</a
                 >
               </p>
               <p>
@@ -65,9 +71,9 @@
             </dd>
           </dl>
         </div>
-        <a class="btn btn_center btn_orange" href="<?php echo esc_url(home_url('#contact')); ?>"
+        <p><a class="btn btn_center btn_orange" href="<?php echo esc_url(home_url('#contact')); ?>"
           >話を聞いてみる</a
-        >
+        ></p>
       </section>
     </main>
 

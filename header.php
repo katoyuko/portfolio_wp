@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo bloginfo('name'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>">
-    <!-- ogp tag -->
+    <!-- OGP tag -->
     <meta property="og:url" content="" />
     <meta property="og:title" content="Omoka | Web Design" />
     <meta property="og:type" content="website" />
@@ -14,10 +14,16 @@
       property="og:description"
       content="〜大切な想いをカタチに 相手に響くデザインを〜"
     />
-    <meta property="og:image" content="<?php echo esc_url(get_theme_file_uri('img/common/logo.png')); ?>" />
+    <meta property="og:image" content="<?php echo esc_url(get_theme_file_uri('img/common/ogp_img.png')); ?>" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@omoka_webdesign" />
-    <!-- サイトアイコンの指定 -->
+    <!-- サンクスページ -->
+    <?php 
+      if ( is_page('thanks') ) {
+        echo "<meta name='robots' content='noindex' />";
+      }
+    ?>
+    <!-- ファビコン -->
     <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('img/common/favicon.png')); ?>"  sizes="16x16" type="image/png" >
     <!-- フォント読み込み -->
     <link rel="stylesheet" href="https://use.typekit.net/rxb6fxm.css">
@@ -43,6 +49,15 @@
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JVNC2760T1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-JVNC2760T1');
+    </script>
     <!-- functions.phpに記載したCSSとJavaScriptを読み込む -->
     <?php wp_head(); ?>
 </head>
@@ -67,7 +82,7 @@
           </h1>
         <?php else : ?>
           <p class="header_logo">
-            <a href="index.html#top">
+            <a href="<?php echo esc_url(home_url('/')); ?>">
               <img src="<?php echo esc_url(get_theme_file_uri('img/common/logo.png')); ?>" alt="Omoka -Web Design- のロゴ">
             </a>
           </p>

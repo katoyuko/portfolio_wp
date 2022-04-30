@@ -10,7 +10,7 @@
             >カ</span
           ><span class="font_large font_emphasis triangle">タ</span
           ><span class="font_large font_emphasis square">チ</span
-          ><span class="font_emphasis semicircle">に</span><br />相手に<span
+          >に<br />相手に<span
             class="font_large"
             >響く</span
           >デザインを
@@ -62,11 +62,11 @@
           <!-- <p class="jp_heading">制作実績</p> -->
         </div>
         <div class="works_grid">
-          <!-- 最新の実績4件ループ表示 -->
+          <!-- 最新の実績6件ループ表示 -->
           <?php
               $args = array(
                   'post_type' => 'post',
-                  'posts_per_page' => 4,
+                  'posts_per_page' => 6,
               );
               $the_query = new WP_Query( $args );
               if ( $the_query->have_posts() ) :
@@ -76,7 +76,11 @@
                 <a href="<?php the_permalink(); ?>">
                   <span class="mask">
                     <span class="img"><?php the_post_thumbnail('medium'); ?></span>
-                    <span class="cap"><span>Concept</span><br /><?php echo get_post_meta($post->ID, 'Concept', true); ?></span>
+                    <!-- <span class="img"><?php
+                      $post_title = get_the_title();
+                      the_post_thumbnail('thumbnail',array('alt' => $post_title,));
+                    ?></span> -->
+                    <span class="cap"><?php echo get_post_meta($post->ID, 'Concept', true); ?></span>
                   </span>
                   <p class="category"><?php $cats = get_the_category();
                   foreach($cats as $cat){
@@ -91,9 +95,9 @@
           <?php endif; ?>
           <!-- end -->
         </div>
-        <a class="btn btn_center btn_mocha" href="<?php echo esc_url(home_url('/category/works/')); ?>">
+        <p><a class="btn btn_center btn_mocha" href="<?php echo esc_url(home_url('/category/works/')); ?>">
           もっと見る</a
-        >
+        ></p>
       </section>
 
       <!-- About -->
@@ -117,7 +121,9 @@
               <p class="message fadeInTrigger delay-time04">
                 そんな想いを胸にシステムエンジニアのお仕事を始めました。その気持ちは変わらず、現在はエンジニアとして働く傍ら、Webデザイナーとしても楽しく活動しています。
               </p>
-              <a href="/about/" class="btn btn_mocha">詳しく見る</a>
+              <p>
+                <a href="/about/" class="btn btn_mocha">詳しく見る</a>
+              </p>
             </div>
           </div>
         </div>
@@ -130,13 +136,11 @@
           <!-- <p class="jp_heading">ご依頼・お問い合わせ</p> -->
         </div>
         <div class="contact_content">
-          <p class="contact_text instagram">
+          <p class="contact_text">
             当ポートフォリオサイトにご訪問いただき、誠にありがとうございます。<br />
             制作のご依頼やご相談、ご不明な点等ございましたらお気軽にお問い合わせください。<br />
             3営業日以内にご連絡をさせていただきます。<br />
-            お急ぎの場合は 
-            <a href="https://www.instagram.com/omoka_web_design/?ref=badge"
-              >Instagram</a> のDMにてご連絡くださいませ。
+            <a href="https://twitter.com/omoka_design">Twitter</a> / <a href="https://www.instagram.com/omoka_design/">Instagram</a> のDMでも承っております。
           </p>
           <?php $get_form = get_posts(array('post_type' => 'wpcf7_contact_form', 'posts_per_page' => -1))[0]; ?>
           <?php echo do_shortcode( '[contact-form-7 id="'.$get_form->ID.'" title="'.$get_form->post_title.'"]' ); ?>
