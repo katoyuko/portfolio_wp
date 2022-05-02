@@ -96,7 +96,7 @@
           <!-- end -->
         </div>
         <p><a class="btn btn_center btn_mocha" href="<?php echo esc_url(home_url('/category/works/')); ?>">
-          もっと見る</a
+          一覧を見る</a
         ></p>
       </section>
 

@@ -187,7 +187,7 @@ section,
   transform: rotate(45deg);
   position: absolute;
   /* ボタンの矢印を右に寄せる */
-  right: 16px;
+  right: 25px;
 }
 
 .btn_mocha:hover,
@@ -196,7 +196,7 @@ section,
 .btn_submit:hover {
   /* hoverした際、グラデーションと影を付ける */
   border-color: transparent;
-  background: linear-gradient(270deg, #ffa373 0%, #ffe140 50%, #ff8240 100%);
+  background: linear-gradient(270deg, #d8a380 0%, #ffe140 50%, #d8a380 100%);
   background-size: 200% auto;
   background-position: right center;
   box-shadow: 0 5px 10px rgba(255, 163, 115, 0.4);
@@ -887,19 +887,19 @@ section,
 
 @keyframes warp {
   0% {
-    border-radius: 50% 60% 50% 70% / 50% 70% 60% 70%;
+    border-radius: 50% 60% 50% 60% / 50% 50% 60% 70%;
   }
   25% {
-    border-radius: 70% 50% 50% 70% / 70% 60% 50% 60%;
+    border-radius: 60% 50% 50% 70% / 60% 60% 50% 70%;
   }
   50% {
-    border-radius: 60% 70% 50% 60% / 40% 50% 70% 60%;
+    border-radius: 50% 60% 50% 50% / 60% 50% 60% 50%;
   }
   75% {
-    border-radius: 70% 60% 50% 70% / 70% 60% 60% 40%;
+    border-radius: 60% 60% 50% 60% / 60% 50% 60% 50%;
   }
   100% {
-    border-radius: 60% 60% 70% 70% / 50% 70% 60% 70%;
+    border-radius: 70% 50% 60% 50% / 50% 60% 50% 50%;
   }
 }
 

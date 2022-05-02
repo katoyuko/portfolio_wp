@@ -103,9 +103,7 @@
             <li><a href="<?php echo esc_url(home_url('#service')); ?>">Service</a></li>
             <li><a href="<?php echo esc_url(home_url('/category/works/')); ?>">Works</a></li>
             <li><a href="<?php echo esc_url(home_url('/about/')); ?>">About</a></li>
-            <li class="btn_contact">
-              <a href="<?php echo esc_url(home_url('#contact')); ?>">Contact</a>
-            </li>
+            <li><a href="<?php echo esc_url(home_url('#contact')); ?>">Contact</a></li>
           </ul>
         </nav>
       </div>

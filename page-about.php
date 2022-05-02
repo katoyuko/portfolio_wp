@@ -55,7 +55,7 @@
                 >
               </p>
               <p class="twitter">
-                Twitter<br />
+                Twitter：<br />
                 <a href="https://twitter.com/omoka_design"
                   >omoka_design</a
                 >
